@@ -32,6 +32,13 @@ postmark.settings = <?php echo json_encode( $this->settings ); ?>;
                 </td>
             </tr>
             <tr>
+                <th><label>Use test key?</label></th>
+                <td>
+                    <input type="checkbox" class="pm-test" value="1" />
+                    <span class="footnote">Use test key (prevents emails from being send but still override wp_mail)</span>
+                </td>
+            </tr>
+            <tr>
                 <th><label>API Key</label></th>
                 <td>
                     <input type="text" class="pm-api-key" value="" />

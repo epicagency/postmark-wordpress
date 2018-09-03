@@ -22,6 +22,9 @@ function wp_mail( $to, $subject, $message, $headers = '', $attachments = array()
     extract( apply_filters( 'wp_mail', compact( 'to', 'subject', 'message', 'headers', 'attachments' ) ) );
 
     $settings = json_decode( get_option( 'postmark_settings' ), true );
+    if( $settings['test'] ) {
+      $settings['api_key'] = 'POSTMARK_API_TEST';
+    }
 
     if ( ! is_array( $attachments ) ) {
         $attachments = explode( "\n", str_replace( "\r\n", "\n", $attachments ) );

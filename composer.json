@@ -1,0 +1,8 @@
+{
+  "name": "wildbit/postmark-wordpress",
+  "description": "The *officially-supported* Postmark plugin for Wordpress.",
+  "type": "wordpress-plugin",
+  "require": {
+    "composer/installers": "^1.0"
+  }
+}
