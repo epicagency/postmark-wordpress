@@ -2,6 +2,7 @@
     $(function() {
         var settings = postmark.settings;
         $('.pm-enabled').prop('checked', settings.enabled);
+        $('.pm-test').prop('checked', settings.test);
         $('.pm-api-key').val(settings.api_key);
         $('.pm-sender-address').val(settings.sender_address);
         $('.pm-force-html').prop('checked', settings.force_html);
@@ -11,6 +12,7 @@
         $(document).on('click', '.save-settings', function() {
             var data = {
                 'enabled': $('.pm-enabled').is(':checked') ? 1 : 0,
+                'test': $('.pm-test').is(':checked') ? 1 : 0,
                 'api_key': $('.pm-api-key').val(),
                 'sender_address': $('.pm-sender-address').val(),
                 'force_html': $('.pm-force-html').is(':checked') ? 1 : 0,
